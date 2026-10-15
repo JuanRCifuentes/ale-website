@@ -10,6 +10,8 @@ const {
 	title = 'Alejandra Sánchez: Personal Site',
 	description = 'The personal site of Alejandra Sánchez',
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <meta charset="UTF-8" />
@@ -17,6 +19,7 @@ const {
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Alejandra Sánchez" />
 <meta property="og:title" content={title} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:description" content={description} />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={title} />
@@ -24,6 +27,8 @@ const {
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
+<link rel="canonical" href={canonicalURL} />
+<link rel="sitemap" href="/sitemap-index.xml" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" href="/favicon.ico" />
