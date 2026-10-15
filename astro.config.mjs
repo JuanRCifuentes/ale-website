@@ -6,4 +6,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://masanchez.com',
 	integrations: [sitemap()],
+	prefetch: { prefetchAll: true, defaultStrategy: 'viewport' },
 });
