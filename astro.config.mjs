@@ -16,6 +16,8 @@ const fontsource = (family, weight, style) => ({
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://masanchez.com',
+	// Every page is a directory, so link with a slash to skip Cloudflare's redirect.
+	trailingSlash: 'always',
 	integrations: [sitemap()],
 	prefetch: { prefetchAll: true, defaultStrategy: 'viewport' },
 	// Self-host the fonts from the installed @fontsource packages so they don't

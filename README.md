@@ -1,30 +1,19 @@
-# Astro Starter Kit: Portfolio
+# masanchez.com
 
-```sh
-bun create astro@latest -- --template portfolio
-```
+Personal site of Alejandra Sánchez, built with [Astro](https://docs.astro.build) and deployed as static assets on Cloudflare Workers.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+## Commands
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+| Command           | Action                                       |
+| :---------------- | :------------------------------------------- |
+| `bun install`     | Install dependencies                         |
+| `bun run dev`     | Start the dev server at `localhost:4321`     |
+| `bun run build`   | Build the site to `./dist/`                  |
+| `bun run preview` | Preview the build locally                    |
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+## Where things live
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `src/pages/`: one file per route; work pages come from `src/content/work/`.
+- `src/assets/`: photos, optimized at build time by `<Image>`.
+- `public/`: files served as-is (favicons, backgrounds, `robots.txt`, `_headers`).
+- Fonts are self-hosted from the `@fontsource` packages (see `astro.config.mjs`).

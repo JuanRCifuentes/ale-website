@@ -11,14 +11,16 @@ import Nav from '../components/Nav.astro';
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
+	noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, noindex } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<MainHead title={title} description={description} />
+		<MainHead title={title} description={description} noindex={noindex} />
+		<slot name="head" />
 		<ClientRouter />
 	</head>
 	<body>
